@@ -1,0 +1,22 @@
+/* Спеціально закоментував щоб не застосовувати стилі обнулення */
+/* @import url("reset.css"); */
+
+.blue {
+	color: rgb(0, 87, 183);
+}
+
+.yellow {
+	color: rgb(255, 221, 0);
+}
+
+.about__title h2 {
+	color: rgb(255, 221, 0);
+}
+
+#war {
+	color: red;
+}
+
+.copyright>a {
+	color: rgb(0, 87, 183);
+}
