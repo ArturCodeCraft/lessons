@@ -1,0 +1,172 @@
+/* =============== Шрифти =============== */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap');
+
+/* Google Fonts (Plugin) */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+
+/* Локальне підключення шрифтів */
+@import url("fonts.css");
+
+/* =============== Скидання стилів =============== */
+/*  Спеціально закоментував щоб не застосовувати стилі обнулення */
+/* @import url("reset.css"); */
+
+/* =============== Хедер =============== */
+header {
+	font-family: "Montserrat";
+	font-size: 40px;
+	text-align: center;
+}
+
+header .underline {
+	text-decoration: underline;
+	text-decoration-color: blue;
+}
+
+header .wavy {
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: purple;
+	text-decoration-style: wavy;
+}
+
+header .double {
+	text-decoration: underline;
+	text-decoration-color: pink;
+	text-decoration-style: double;
+}
+
+header .line-through {
+	font-weight: 700;
+	text-decoration: line-through;
+	text-decoration-color: red;
+}
+
+header .overline-dotted {
+	text-decoration: overline;
+	text-decoration-color: yellow;
+	text-decoration-style: dotted;
+}
+
+/* =============== Верстаємо нову статтю, використовуючи УСІ властивості шрифту та тексту та їх значення. =============== */
+.article {
+	font-family: "KyivRegion", serif;
+}
+
+.article__title {
+	font-size: 48px;
+	color: #9ABB91;
+	text-align: center;
+	text-shadow:
+		5px 5px 15px rgba(17, 87, 64, 0.4),
+		-2px -2px 5px rgba(222, 126, 0, 0.8);
+	text-transform: uppercase;
+	letter-spacing: 8px;
+}
+
+.p-1 {
+	text-align: justify;
+}
+
+.p-2 {
+	text-align: right;
+	word-spacing: 18px;
+}
+
+.romania {
+	text-decoration: underline;
+	text-decoration-color: #115740;
+	color: #115740;
+	text-decoration-style: dashed;
+	font-size: 28px;
+}
+
+.moldova {
+	text-decoration: underline;
+	text-decoration-color: #EFDBB2;
+	color: #EFDBB2;
+	text-decoration-style: dotted;
+	font-size: 28px;
+}
+
+.belarus {
+	text-decoration: underline;
+	text-decoration-color: #de7c00;
+	color: #de7c00;
+	text-decoration-style: double;
+	font-size: 28px;
+	font-style: italic;
+}
+
+.russia {
+	text-decoration: line-through;
+	text-decoration-color: #da6254;
+	color: #da6254;
+	font-size: 28px;
+	font-style: oblique;
+}
+
+/* =============== Верстаємо блоки з макету KROVATO - блок 1 =============== */
+.korovato__block-1 {
+	color: #2b2929;
+	font-family: "Proxima Nova", sans-serif;
+}
+
+.korovato__block-1 h2 {
+	font-size: 40px;
+	text-align: center;
+	line-height: calc(48/40);
+}
+
+.korovato__block-1 p {
+	font-size: 16px;
+	line-height: 187.5%;
+	/* 30/16 */
+}
+
+/* =============== Верстаємо блоки з макету KROVATO - блок 2 =============== */
+.korovato__block-2 {
+	color: #2b2929;
+	font-family: "Proxima Nova", sans-serif;
+}
+
+.korovato__block-2 h2 {
+	font-size: 40px;
+	line-height: 120%;
+	/* 48/40 */
+}
+
+.korovato__block-2 img {
+	width: 100%;
+}
+
+.korovato__block-2 p {
+	color: #2b2929;
+	font-size: 16px;
+	font-family: "Proxima Nova", sans-serif;
+	line-height: 187.5%;
+	/* 30/16 */
+}
+
+.block-2__subtitle {
+	font-size: 20px;
+	line-height: 140%;
+	/* 28/20 */
+}
+
+.block-2__item {
+	line-height: 187.5%;
+	/* 30/16 */
+}
+
+/* =============== Футер =============== */
+footer {
+	font-family: "Vollkorn SC";
+	text-align: center;
+	font-size: 48px;
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: #9ABB91;
+	text-decoration-style: wavy;
+}
