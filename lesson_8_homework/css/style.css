@@ -1,0 +1,81 @@
+/* ======== <Шрифти> ===================================================================== */
+/* Google Fonts */
+
+
+/* ======== <Скидання_стилів> ===================================================================== */
+@import url("reset.css");
+
+/* ======== <body> ===================================================================== */
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* ======== <header> ===================================================================== */
+.header {
+	font-size: 32px;
+	text-align: center;
+	padding: 20px 0;
+}
+
+/* ======== <home> ===================================================================== */
+.page__home {
+	background-color: #f8f8f8;
+	padding-block: 40px;
+}
+
+.home__container {
+	max-width: calc(1100px + 15px + 15px);
+	padding-inline: 15px;
+	margin: 0 auto;
+}
+
+.home__block:nth-child(1) img,
+.home__block:nth-child(2) img {
+	max-width: 320px;
+}
+
+.home__block span {
+	color: #2b2929;
+	font-size: 26px;
+	line-height: 130.769231%;
+	/* 34/26 */
+	padding-left: 32px;
+}
+
+.home__block span span {
+	color: #ffbc57;
+	padding-left: 0;
+	font-weight: 600;
+}
+
+.home__block:not(:last-child) {
+	margin-bottom: 32px;
+}
+
+.home__bg img {
+	max-width: 100%;
+}
+
+.home__bg span {
+	display: inline-block;
+	color: #2b2929;
+	font-size: 26px;
+	line-height: 130.769231%;
+	/* 34/26 */
+	padding-top: 16px;
+}
+
+.home__bg span span {
+	color: #ffbc57;
+	font-weight: 600;
+}
+
+/* ======== <footer> ===================================================================== */
+.footer {
+	text-align: center;
+	padding: 40px 0;
+}
+
+.footer a {
+	padding: 20px;
+}
