@@ -1,0 +1,138 @@
+/* ======== <Шрифти> ===================================================================== */
+/* Google Fonts */
+
+
+/* ======== <Скидання_стилів> ===================================================================== */
+@import url("reset.css");
+
+/* ======== <Загальні стилі> ===================================================================== */
+body {
+	background-color: #2a3032;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #2c2c2c;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+}
+
+[class*="__container"] {
+	max-width: calc(1200px + 16px + 16px);
+	padding-left: 16px;
+	padding-right: 16px;
+	margin: 0px auto;
+}
+
+/* ======== <header> ===================================================================== */
+header,
+footer {
+	color: #fff;
+	font-size: 32px;
+	font-weight: 700;
+	padding-block: 16px;
+}
+
+/* ======== <car> ===================================================================== */
+.car__container {
+	width: 1240px;
+	height: 620px;
+}
+
+.car__body {
+	background-color: #bdc7cc;
+	width: 600px;
+	height: 120px;
+	border-radius: 16px 8px 48px 48px;
+
+	position: relative;
+	top: 295px;
+	left: 300px;
+	animation: up-down 2s linear infinite;
+}
+
+@keyframes up-down {
+	0% {
+		transform: translate(0px, 0px);
+	}
+
+	50% {
+		transform: translate(0px, 16px);
+	}
+
+	100% {
+		transform: translate(0px, 0px);
+	}
+}
+
+.car__cabin {
+	background-color: #bdc7cc;
+	width: 250px;
+	height: 100px;
+	border-radius: 90px 16px 0 0;
+
+	position: absolute;
+	top: -99px;
+	left: 100px;
+}
+
+.car__wheel-1,
+.car__wheel-2 {
+	background-color: #212026;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	border: 4px dashed #2f3038;
+	position: absolute;
+	top: 60%;
+
+	animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+	0% {
+		rotate: 0deg;
+	}
+
+	100% {
+		rotate: -360deg;
+	}
+}
+
+.car__body:hover .car__wheel-1,
+.car__body:hover .car__wheel-2 {
+	animation-duration: 1s;
+}
+
+.car__wheel-1::before,
+.car__wheel-2::before {
+	content: '';
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	border: 8px dashed #2f3038;
+	background-color: #0d0d16;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.car__wheel-1 {
+	left: 50px;
+}
+
+.car__wheel-2 {
+	right: 50px;
+}
+
+.car__glass {
+	background-color: #1c1d21;
+	width: 230px;
+	height: 80px;
+	border-radius: 100px 6px 0 0;
+
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
