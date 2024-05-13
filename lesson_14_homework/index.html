@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/style.css">
+
+		<title>Lesson 14 - HomeWork</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<!-- ======== <header> ===================================================================== -->
+			<header class="header">
+				<h1>Lesson 14 - HomeWork</h1>
+			</header>
+
+			<!-- ======== <main> ===================================================================== -->
+			<main class="page">
+				<!-- ======== <order> ===================================================================== -->
+				<section class="page__order order" id="order">
+					<div class="order__container">
+						<form class="order__form" action="#">
+							<div class="order__info info">
+								<div class="info__title title">
+									<img src="img/icon-info.svg" alt="Image">
+
+									<h2>Інформація про покупця</h2>
+								</div>
+
+								<div class="info__user user-info">
+									<input class="user-info__input" type="text" placeholder="Прізвище">
+									<input class="user-info__input" type="tel" placeholder="Контактний телефон">
+									<input class="user-info__input" type="text" placeholder="Ім’я">
+									<input class="user-info__input" type="email" placeholder="E-mail">
+									<input class="user-info__input" type="text" placeholder="По батькові">
+								</div>
+
+								<label for="another-person-checkbox" class="info__checkbox checkbox-info">
+									<input id="another-person-checkbox" type="checkbox" class="checkbox-info__input">
+
+									<span class="checkbox-info__text">Отримуватиме замовлення інша людина</span>
+								</label>
+							</div>
+
+							<div class="order__delivery delivery">
+								<div class="delivery__title title">
+									<img src="img/icon-dostavka.svg" alt="Image">
+
+									<h2>Вибір способу доставки</h2>
+								</div>
+
+								<ul class="delivery__list">
+									<li class="delivery__item radio-list">
+										<input id="1" type="radio" class="radio-list__input" checked>
+										<label for="1" class="radio-list__radio">
+											<div class="radio-list__image radio-list__image--shop-1"></div>
+
+											<span class="radio-list__text">Самовивіз із магазину</span>
+
+											<span class="radio-list__sub-text">Бесплатно</span>
+										</label>
+									</li>
+
+									<li class="delivery__item radio-list">
+										<input id="2" type="radio" class="radio-list__input">
+										<label for="2" class="radio-list__radio">
+											<div class="radio-list__image radio-list__image--np"></div>
+
+											<span class="radio-list__text">Доставка Нова Пошта</span>
+
+											<span class="radio-list__sub-text">≈ від 500 грн</span>
+										</label>
+									</li>
+
+									<li class="delivery__item radio-list">
+										<input id="3" type="radio" class="radio-list__input">
+										<label for="3" class="radio-list__radio">
+											<div class="radio-list__image radio-list__image--shop"></div>
+
+											<span class="radio-list__text">Доставка кур'єром</span>
+
+											<span class="radio-list__sub-text">≈ від 200 грн</span>
+										</label>
+									</li>
+								</ul>
+
+								<div class="delivery__hours hours-delivery">
+									<div class="hours-delivery__text">
+										<p class="hours-delivery__time">
+											Графік роботи: щодня з 9:00 до 18:00
+										</p>
+
+										<p class="hours-delivery__location">
+											м. Київ, пров. Ізяславський 52, пов. 2
+										</p>
+									</div>
+
+									<a href="#" class="hours-delivery__btn">
+										<span>На мапі</span>
+									</a>
+								</div>
+							</div>
+
+							<div class="order__payment payment">
+								<div class="payment__title title">
+									<img src="img/icon-oplata.svg" alt="Image">
+
+									<h2>Вибір способу оплати</h2>
+								</div>
+
+								<div class="payment__items">
+									<label class="payment__radio radio-item">
+										<input type="radio" class="radio-item__input">
+
+										<span class="radio-item__text">Готівкою при отриманні (Післясплата)</span>
+									</label>
+
+									<label class="payment__radio radio-item">
+										<input type="radio" class="radio-item__input" checked>
+
+										<span class="radio-item__text">Оплата карткою на сайті</span>
+
+										<img src="img/master-card-logo.svg" alt="Image" class="radio-item__image">
+
+										<img src="img/visa-card-logo.svg" alt="Image" class="radio-item__image">
+									</label>
+
+									<label class="payment__radio radio-item">
+										<input type="radio" class="radio-item__input">
+
+										<span class="radio-item__text">Privat Pay</span>
+
+										<img src="img/privat-pay-logo.svg" alt="Image" class="radio-item__image">
+									</label>
+
+									<label class="payment__radio radio-item">
+										<input type="radio" class="radio-item__input">
+
+										<span class="radio-item__text">Кредит від Krovato</span>
+									</label>
+
+									<label class="payment__radio radio-item">
+										<input type="radio" class="radio-item__input">
+
+										<span class="radio-item__text">Оплата частинами ПриватБанк</span>
+
+										<img src="img/privaty-credit-logo.svg" alt="Image" class="radio-item__image">
+									</label>
+
+									<label class="payment__radio radio-item">
+										<input type="radio" class="radio-item__input">
+
+										<span class="radio-item__text">Оплата частинами МоноБанк</span>
+
+										<img src="img/mono-bank-logo.svg" alt="Image" class="radio-item__image">
+									</label>
+								</div>
+							</div>
+
+							<div class="order__comment comment">
+								<div class="comment__title title">
+									<img src="img/icon-comment.svg" alt="Image">
+
+									<h2>Коментар до замовлення</h2>
+								</div>
+
+								<textarea class="commet__textarea" placeholder="Ваш коментар"></textarea>
+							</div>
+						</form>
+					</div>
+				</section>
+			</main>
+
+			<!-- ======== <footer> ===================================================================== -->
+			<footer class="footer">
+				<a href="https://github.com/ArturCodeCraft">© 2023 "ArturCodeCraft - studio" - Where Art Meets Code</a>
+			</footer>
+		</div>
+	</body>
+</html>
