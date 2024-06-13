@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Кодування тексту -->
+		<meta charset="UTF-8">
+		<!-- Налаштування в'юпорту (адаптиву, масштабу тощо) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Підключення окремого файлу стилів -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Заголовок сторінки в браузері -->
+		<title>Lesson 21 - HomeWork</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<!-- ======== <header> ===================================================================== -->
+			<header class="header" id="header">
+				<div class="header__container">
+					<h1 class="header__title">Lesson 21 - HomeWork</h1>
+				</div>
+			</header>
+
+			<!-- ======== <main> ===================================================================== -->
+			<main class="page">
+				<!-- ======== <hero> ===================================================================== -->
+				<section class="page__hero hero" id="hero">
+					<div class="hero__container">
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №1</h2>
+
+							<div class="hero__question">Яка назва змінної вірна</div>
+
+							<div class="hero__answer-options">
+								<p>1) let user-name</p>
+								<p>2) let UserName</p>
+								<p>3) let userName</p>
+							</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь: <span>3) let userName</span></p>
+
+								<p>- Імена змінних у JavaScript повинні складатися з літер, цифр, символів $, або _. Вони не можуть містити дефіс (-), тому let user-name є некоректним.</p>
+
+								<p>- Загальноприйнятим стилем у JavaScript є camelCase для змінних, тобто початкова літера маленька, а наступні слова починаються з великої літери, як у userName. Стиль UserName (PascalCase) зазвичай використовується для назв класів.</p>
+							</div>
+						</article>
+
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №2</h2>
+
+							<div class="hero__question">Чи буде помилка при виконанні наступної програми</div>
+
+							<div class="hero__answer-options">
+								<p>const userName = 20 <br>
+									userName = "Іштван"</p>
+							</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь: <span>Так, буде помилка.</span></p>
+
+								<p>- const оголошує змінну, значення якої не може бути змінене після ініціалізації. Спроба змінити значення змінної userName, оголошеної з const, призведе до помилки TypeError.</p>
+							</div>
+						</article>
+
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №3</h2>
+
+							<div class="hero__question">Що потрапить в консоль?</div>
+
+							<div class="hero__answer-options">
+								<p>let numOne = 20</p>
+								<p>let numTwo = "20"</p>
+
+								<p>let numSumm = numOne + numTwo <br>
+									console.log(numSumm)</p>
+							</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь: <span>2020</span></p>
+
+								<p>- У JavaScript, якщо один з операндів операції + є рядком, то інший операнд буде перетворено на рядок, і виконається конкатенація. В даному випадку numOne (число) буде перетворено на рядок і конкатеновано з numTwo (рядок), що дасть результат "2020".</p>
+							</div>
+						</article>
+					</div>
+				</section>
+			</main>
+
+			<!-- ======== <footer> ===================================================================== -->
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__copy">
+						<a href="https://github.com/ArturCodeCraft">© 2023 "ArturCodeCraft - studio" - Where Art Meets Code</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
