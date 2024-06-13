@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Кодування тексту -->
+		<meta charset="UTF-8">
+		<!-- Налаштування в'юпорту (адаптиву, масштабу тощо) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Підключення окремого файлу стилів -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Заголовок сторінки в браузері -->
+		<title>Lesson 22 - HomeWork</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<!-- ======== <header> ===================================================================== -->
+			<header class="header" id="header">
+				<div class="header__container">
+					<h1 class="header__title">Lesson 22 - HomeWork</h1>
+				</div>
+			</header>
+
+			<!-- ======== <main> ===================================================================== -->
+			<main class="page">
+				<!-- ======== <hero> ===================================================================== -->
+				<section class="page__hero hero" id="hero">
+					<div class="hero__container">
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №1</h2>
+
+							<div class="hero__question">Що потрапить в консоль?</div>
+
+							<div class="hero__answer-options">
+								<p>
+									let someVar = 0;<br>
+									++someVar;<br>
+									<br>
+									if (someVar) {<br>
+									console.log(someVar);<br>
+									}
+								</p>
+							</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь: <span>1</span></p>
+
+								<p>- Оператор ++ збільшує значення someVar до 1. Умовне вираження if (someVar) вважає 1 істинним, тому в консоль потрапляє 1.</p>
+							</div>
+						</article>
+
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №2</h2>
+
+							<div class="hero__question">За допомогою циклу FOR виведіть в консоль 10 рядків:</div>
+
+							<div class="hero__answer-options">
+								<p>Пункт №1</p>
+								<p>Пункт №2</p>
+								<p>і т.д.</p>
+							</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь:</p>
+
+								<p><span>
+										for (let i = 1; i <= 10; i++) { <br>
+										console.log(`Пункт №${i}`); <br>
+										}
+									</span></p>
+
+								<p>- Цикл for проходить від 1 до 10, виводячи рядок для кожного значення.</p>
+							</div>
+						</article>
+
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №3</h2>
+
+							<div class="hero__question">Що потрапить в консоль ?</div>
+
+							<div class="hero__answer-options">
+								<p>
+									if (2 * 20 <= 10 || 30 / 2 < 5 && 10 <= "10" || 20 === "20") { <br>
+									console.log('000'); <br>
+									}
+								</p>
+							</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь: <span>Нічого</span></p>
+
+								<p>- Усі вирази у if є хибними, тому код у тілі умови не виконується, і нічого не виводиться.</p>
+							</div>
+						</article>
+
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №4</h2>
+
+							<div class="hero__question">Створіть функцію, яка повертає результат ділення числа a на число b з додаванням рядка "Результат ділення: "
+								Викличте функцію передаючі різні значення, у тому числі не передаючи зовсім.
+								Функція не має повертати NaN, Infinite або помилку</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь:</p>
+
+								<p><span>
+										function divide(a = 0, b = 1) { <br>
+										return `Результат ділення: ${a / b}`; <br>
+										} <br>
+										<br>
+										console.log(divide(10, 2)); <br>
+										console.log(divide(15, 3)); <br>
+										console.log(divide()); <br>
+									</span></p>
+
+								<p>- Функція divide приймає два параметри з значеннями за замовчуванням, щоб уникнути NaN або помилки.</p>
+							</div>
+						</article>
+
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №5</h2>
+
+							<div class="hero__question">Створіть масив даних - 5 елементів, один з яких число 10
+								Обробіть масив за допомогою методу перебору
+								Перевіряйте елемент на відповідність числу 10, та у разі відповідності, виводьте в консоль</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь:</p>
+
+								<p><span>
+										let dataArray = [5, "hello", 10, 3.14, true]; <br>
+										<br>
+										dataArray.forEach(function(element) { <br>
+										if (element === 10) { <br>
+										console.log(element); <br>
+										} <br>
+										}); <br>
+									</span></p>
+
+								<p>- Метод forEach проходить по кожному елементу масиву і перевіряє, чи дорівнює елемент 10. Якщо так, він виводить його в консоль.</p>
+							</div>
+						</article>
+					</div>
+				</section>
+			</main>
+
+			<!-- ======== <footer> ===================================================================== -->
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__copy">
+						<a href="https://github.com/ArturCodeCraft">© 2023 "ArturCodeCraft - studio" - Where Art Meets Code</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
