@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Кодування тексту -->
+		<meta charset="UTF-8">
+		<!-- Налаштування в'юпорту (адаптиву, масштабу тощо) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Підключення окремого файлу стилів -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Заголовок сторінки в браузері -->
+		<title>Lesson 23 - HomeWork</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<!-- ======== <header> ===================================================================== -->
+			<header class="header" id="header">
+				<div class="header__container">
+					<h1 class="header__title">Lesson 23 - HomeWork</h1>
+				</div>
+			</header>
+
+			<!-- ======== <main> ===================================================================== -->
+			<main class="page">
+				<!-- ======== <hero> ===================================================================== -->
+				<section class="page__hero hero" id="hero">
+					<div class="hero__container">
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №1</h2>
+
+							<div class="hero__question">Отримати в константу елемент "body"</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь: <span>1</span></p>
+								<p><span>
+										const bodyElement = document.querySelector('body');
+									</span></p>
+
+								<p>- Використовується метод querySelector для отримання елементу "body" і збереження його в константу bodyElement.</p>
+							</div>
+						</article>
+
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №2</h2>
+
+							<div class="hero__question">Написати функцію, яка додає в "body" список UL з певною кількістю LI (кількість має передаватись як параметр функції, також мати значення за замовченням)</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь:</p>
+
+								<p><span>
+										function addListToBody(itemCount = 5) { <br>
+										const ulElement = document.createElement('ul'); <br>
+										<br>
+										for (let i = 1; i <= itemCount; i++) { <br>
+										const liElement = document.createElement('li'); <br>
+										liElement.textContent = `Item ${i}`; <br>
+										ulElement.appendChild(liElement); <br>
+										} <br>
+										<br>
+										document.body.appendChild(ulElement); <br>
+										} <br>
+										<br>
+										// Виклик функції з параметром <br>
+										addListToBody(10); <br>
+										<br>
+										// Виклик функції без параметра (буде використано значення за замовчуванням) <br>
+										addListToBody();
+									</span></p>
+
+								<p>- Функція addListToBody створює "ul" і додає до нього вказану кількість "li" елементів з текстом.</p>
+							</div>
+						</article>
+
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №3</h2>
+
+							<div class="hero__question">
+								Додати до елементу "body" класс loaded. Потім перевірити чи є клас loaded у елемента "body" і, якщо є, додати стиль кольору тесту зедлений.
+							</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь: <span>Нічого</span></p>
+
+								<p><span>
+										document.body.classList.add('loaded'); <br>
+										<br>
+										if (document.body.classList.contains('loaded')) { <br>
+										document.body.style.color = 'green'; <br>
+										}
+									</span></p>
+
+								<p>- Використовується метод classList для додавання класу loaded до "body", потім перевіряється наявність цього класу і змінюється колір тексту.</p>
+							</div>
+						</article>
+
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №4</h2>
+
+							<div class="hero__question">
+								Дано в html: три елементи з класом item. Треба отримати ці елементи в константу, кожному додати клас active, та перезаписати контент всередені кожного елемента на "Елемент №(тут порядковий номер елементу починаючи з 1)".
+							</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь:</p>
+
+								<p><span>
+										const items = document.querySelectorAll('.item'); <br>
+										<br>
+										items.forEach((item, index) => { <br>
+										item.classList.add('active'); <br>
+										item.textContent = `Елемент №${index + 1}`; <br>
+										});
+									</span></p>
+
+								<p>- Метод querySelectorAll отримує всі елементи з класом item, їм додається клас active, і змінюється текстовий контент.</p>
+							</div>
+						</article>
+
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №5</h2>
+
+							<div class="hero__question">
+								Дано в html: текст, далі кнопка з класом button. Треба прокрутити скрол сторінки до кнопки
+							</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь:</p>
+
+								<p><span>
+										const button = document.querySelector('.button'); <br>
+										button.scrollIntoView({ behavior: 'smooth' });
+									</span></p>
+
+								<p>- Використовується метод scrollIntoView для плавного скролінгу до кнопки.</p>
+							</div>
+						</article>
+
+						<article class="hero__item">
+							<h2 class="hero__title">Задача №6</h2>
+
+							<div class="hero__question">
+								Дано в html: посилання з класом link Треба додати до посилання дата атрибут зі значенням 100 Поім отримати значення трибуту, та, якщо значення меньше 200 пофарбувати колір тексту посилання в червоний
+							</div>
+
+							<div class="hero__right-answer">
+								<p>Правильна відповідь:</p>
+
+								<p><span>
+										const link = document.querySelector('.link'); <br>
+										link.setAttribute('data-value', '100'); <br>
+										<br>
+										const dataValue = parseInt(link.getAttribute('data-value'), 10); <br>
+										<br>
+										if (dataValue < 200) { <br>
+										link.style.color = 'red'; <br>
+										}
+									</span></p>
+
+								<p>- Метод setAttribute додає дата-атрибут до посилання, значення отримується і перевіряється, а колір тексту змінюється, якщо значення менше 200.</p>
+							</div>
+						</article>
+					</div>
+				</section>
+			</main>
+
+			<!-- ======== <footer> ===================================================================== -->
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__copy">
+						<a href="https://github.com/ArturCodeCraft">© 2023 "ArturCodeCraft - studio" - Where Art Meets Code</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
