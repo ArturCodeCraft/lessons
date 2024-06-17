@@ -1,0 +1,178 @@
+@use "sass:math";
+
+// ========== <Підключення Міксінів> ==================================================
+@import "_mixins.scss";
+
+// ========== <Підключення Шрифтів> ==================================================
+// Підключення шрифтів з Google Fonts
+
+// Підключити, якщо є локальні файли шрифтів
+// @import "_fonts.scss";
+
+// ========== <Скидання стилів> ==================================================
+// Скидання стилів
+@import "_reset.scss";
+
+// ========== <Налаштування адаптивної сітки> ==================================================
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1180;
+// Загальний відступ у контейнера (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ========== <html + body + wrapper> ==================================================
+html {
+	// Для плавного scroll по id
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #fff;
+	color: #fff;
+	font-family: Arial, sans-serif;
+	opacity: 0.4;
+
+	&.loaded {
+		opacity: 1;
+	}
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+
+	display: flex;
+	flex-direction: column;
+
+	// Прижимаємо footer
+	> main {
+		flex-grow: 1;
+	}
+}
+
+// <__container> ====================
+[class*="__container"] {
+	max-width: $containerWidth + px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+// <page> ====================
+.page {
+	&__hero {
+	}
+}
+
+// ========== <Стилі загальних/одинакових елементів проекту> ==================================================
+
+// ========== <header> ==================================================
+.header {
+	&__container {
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: 700;
+		line-height: 1.5;
+		background-color: #0b2b40;
+		padding: 1rem;
+		border-radius: 1.5rem;
+	}
+
+	cursor: pointer;
+}
+
+// ========== <hero> ==================================================
+.hero {
+	&__container {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	&__item {
+		padding: 1rem;
+		border-radius: 1.5rem;
+		background-color: #d98f4e;
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__title {
+		font-size: 1.5rem;
+		font-weight: 600;
+		padding: 1rem;
+		background-color: #4393d9;
+		border-radius: 0.5rem;
+		margin-bottom: 0.75rem;
+		cursor: pointer;
+
+		span {
+			display: none;
+		}
+
+		&.active {
+			span {
+				display: block;
+			}
+		}
+
+		div.item-count {
+			display: inline-block;
+			color: red;
+			padding-top: 24px;
+		}
+	}
+
+	&__question {
+		margin-bottom: 0.5rem;
+	}
+
+	&__answer-options {
+		> *:not(:last-child) {
+			margin-bottom: 0.375rem;
+		}
+		margin-bottom: 0.75rem;
+	}
+
+	&__right-answer {
+		line-height: 1.5;
+		span {
+			font-weight: 600;
+		}
+		> *:not(:last-child) {
+			margin-bottom: 0.375rem;
+		}
+	}
+}
+
+// ========== <footer> ==================================================
+.footer {
+	&__container {
+	}
+
+	&__copy {
+		display: block;
+		text-align: center;
+		font-weight: 700;
+		line-height: 1.5;
+		padding: 1rem;
+		background-color: #0b2b40;
+		border-radius: 1.5rem;
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+// <> ==================================================
+
+// <end>
